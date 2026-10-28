@@ -1,0 +1,16 @@
+* text=auto
+
+*.go text eol=lf
+*.mod text eol=lf
+*.sum text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ps1 text eol=crlf
+*.rc text eol=crlf
+*.manifest text eol=crlf
+*.iss text eol=crlf
+
+*.ico binary
+*.png binary
+*.syso binary
