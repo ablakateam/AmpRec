@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible AmpRec problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve AmpRec. Do not include private recordings or copyrighted media.
+  - type: input
+    id: version
+    attributes:
+      label: AmpRec version
+      placeholder: 1.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Selected source
+      options:
+        - Winamp
+        - Google Chrome
+        - Microsoft Edge
+        - Mozilla Firefox
+        - Brave
+        - Not source-specific
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include the output format, bitrate, and exact sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2, build 26100
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: I removed sensitive paths and media from logs or screenshots.
+          required: true

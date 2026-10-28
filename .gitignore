@@ -1,0 +1,14 @@
+/build/
+/dist/
+/tmp/
+*.part
+*.part.wav
+*.part.mp3
+*.test
+coverage.out
+*.log
+/.vscode/
+/.idea/
+/AmpRec_Windows_11_Product_Design_and_Codex_Spec.pdf
+/AmpRec_Codex_Mockup_Assets.zip
+/assets/mockups/Codex_Handoff_README.md

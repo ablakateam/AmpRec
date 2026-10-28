@@ -1,0 +1,36 @@
+name: Windows CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          check-latest: true
+          cache: true
+      - name: Format check
+        shell: pwsh
+        run: |
+          $changed = & gofmt -l .
+          if ($changed) {
+            $changed | Write-Error
+            exit 1
+          }
+      - name: Unit and race tests
+        run: go test -race ./...
+      - name: Vet
+        run: go vet -unsafeptr=false ./...
+      - name: Build portable executable
+        shell: pwsh
+        run: .\scripts\build.ps1
