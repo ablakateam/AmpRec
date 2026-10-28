@@ -5,7 +5,7 @@ $go = Get-Command go -ErrorAction SilentlyContinue
 if (-not $go -and (Test-Path -LiteralPath 'C:\Program Files\Go\bin\go.exe')) {
     $go = Get-Item 'C:\Program Files\Go\bin\go.exe'
 }
-if (-not $go) { throw 'Go 1.26 or later is required. Install the latest patch release from https://go.dev/dl/.' }
+if (-not $go) { throw 'Go 1.27 or later is required. Install the latest patch release from https://go.dev/dl/.' }
 $goExe = if ($go.Source) { $go.Source } else { $go.FullName }
 
 $dist = Join-Path $repoRoot 'dist'

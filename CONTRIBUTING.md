@@ -4,7 +4,7 @@ Thank you for helping improve AmpRec. Keep changes focused, local-only, and comp
 
 ## Development setup
 
-Use Windows x64, Go 1.26 or later, and a functional Windows audio endpoint. Run:
+Use Windows x64, Go 1.27 or later, and a functional Windows audio endpoint. Run:
 
 ```powershell
 .\scripts\test.ps1

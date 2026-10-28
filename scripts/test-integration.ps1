@@ -5,7 +5,7 @@ $go = Get-Command go -ErrorAction SilentlyContinue
 if (-not $go -and (Test-Path -LiteralPath 'C:\Program Files\Go\bin\go.exe')) {
     $go = Get-Item 'C:\Program Files\Go\bin\go.exe'
 }
-if (-not $go) { throw 'Go 1.26 or later is required.' }
+if (-not $go) { throw 'Go 1.27 or later is required.' }
 $goExe = if ($go.Source) { $go.Source } else { $go.FullName }
 $testDir = Join-Path $repoRoot 'build\integration'
 New-Item -ItemType Directory -Force -Path $testDir | Out-Null

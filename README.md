@@ -98,7 +98,7 @@ Record only content you own or have permission to record.
 
 ## Build from source
 
-Use 64-bit PowerShell with Go 1.26 or later:
+Use 64-bit PowerShell with Go 1.27 or later:
 
 ```powershell
 git clone https://github.com/ablakateam/AmpRec.git

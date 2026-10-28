@@ -29,7 +29,7 @@ The first command runs unit, race, WAV, and MP3 integrity tests. The integration
 
 ## Coding Style & Naming Conventions
 
-Use Go 1.26 or later (latest patch release) and run `gofmt` on every Go change. Follow standard Go naming: exported identifiers use `PascalCase`, package-private identifiers use `camelCase`, and package names are short lowercase words. Keep Windows-only files suffixed `_windows.go`. Wrap each COM interface, handle, file, GDI object, and goroutine with explicit ownership and cleanup. Avoid `unsafe` outside the native boundary.
+Use Go 1.27 or later (latest patch release) and run `gofmt` on every Go change. Follow standard Go naming: exported identifiers use `PascalCase`, package-private identifiers use `camelCase`, and package names are short lowercase words. Keep Windows-only files suffixed `_windows.go`. Wrap each COM interface, handle, file, GDI object, and goroutine with explicit ownership and cleanup. Avoid `unsafe` outside the native boundary.
 
 ## Testing Guidelines
 
